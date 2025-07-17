@@ -1,100 +1,92 @@
 
+  Movie Genre Prediction using NLP
 
- Movie Genre Prediction using NLP
-
-A machine learning web application that predicts the **genre of a movie** based on its plot description.  
-Built using **Python**, **Flask**, **scikit-learn**, and **NLP techniques**, this project demonstrates how text classification can be applied to real-world problems like movie genre detection.
-
----
-
- Project Overview
-
-This project takes a movie's plot summary as input and predicts the most likely genre (e.g., Action, Comedy, Drama).  
-It uses TF-IDF vectorization to convert text into feature vectors and a classification model (Multinomial Naive Bayes / Logistic Regression) for prediction.
-
----
-
- Features
-
-- Genre classification from movie plot text
-- TF-IDF-based feature extraction
-- Trained machine learning model
-- User-friendly web interface using Flask
-
----
-
- Tech Stack
-
-- Python
-- Flask
-- Scikit-learn
-- Pandas, NumPy
-- HTML / CSS (Frontend)
-- NLP: TF-IDF Vectorizer
+This web-based application predicts the genre of a movie based on its description using Natural Language Processing (NLP) and Machine Learning techniques.
 
 ---
 
  Project Structure
 
 ```
+
 movie-genre-prediction/
-├── app.py # Flask backend
-├── genre_model.pkl # Trained model
-├── tfidf_vectorizer.pkl # TF-IDF vectorizer
-├── templates/
-│ └── index.html # Single page interface
-├── requirements.txt # Required packages
-└── README.md # Project documentation
+├── app.py                # Flask app to take user input and predict movie genre
+├── movie\_data.xlsx       # Dataset with movie plots and corresponding genres
+├── sample.xlsx           # Sample input data for testing
+├── templates/            # HTML templates for frontend
+│   ├── index.html        # Input form for movie description
+│   └── result.html       # Output result page
+├── OUTPUTS/              # Optional: stores logs or prediction screenshots
+├── requirements.txt      # Required Python libraries (if created)
+└── README.md             # Documentation
 
 ````
 
 ---
 
-1.   How to Run
+ How to Run the Project
 
-1. Clone the Repository
+1. **Clone the Repository**
    ```bash
-   git clone https://github.com/SREELEKHA419/movie-genre-prediction.git
+   git clone https://github.com/yourusername/movie-genre-prediction.git
    cd movie-genre-prediction
 ````
 
-2. Install Requirements
+2. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the Flask App
+   *(If requirements.txt is missing, install manually: Flask, scikit-learn, pandas, etc.)*
+
+3. **Start the Flask App**
 
    ```bash
    python app.py
    ```
 
-4. Visit in Browser
+4. **Open in Browser**
 
    ```
-   http://127.0.0.1:5000/
+   http://localhost:5000
    ```
 
 ---
 
- Example
+## 🧠 ML Model Details
 
-Input:
-"A retired CIA agent travels across Europe to rescue his kidnapped daughter."
-
-Output:
-Predicted Genre: Action / Thriller
+* **Features Used**: Movie description (text)
+* **Technique**: TF-IDF Vectorizer + Multinomial Naive Bayes (or Logistic Regression)
+* **Output**: Predicted genre (e.g., Action, Comedy, Drama, etc.)
 
 ---
-License
 
-This project is licensed under the **MIT License**.
-Feel free to use and modify with attribution.
+Dataset
+
+* `movie_data.xlsx`: Contains movie descriptions and genres.
+* `sample.xlsx`: Sample entries for user testing.
 
 ---
- Developed By
+
+ Features
+
+* Clean and simple web UI (built with Flask and Jinja2)
+* Predicts genre using ML model trained on real data
+* Interactive result display
+
+---
+
+ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+ Author
 
 Sreelekha A S
-B.Tech Computer Science and Engineering
-B. S. Abdur Rahman Crescent Institute of Science and Technology, Chennai
+B.Tech CSE | B.S. Abdur Rahman Crescent Institute of Science and Technology
+[GitHub](https://github.com/SREELEKHA419)
+
+
